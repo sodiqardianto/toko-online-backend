@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardContoller;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductGalleryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('products', ProductController::class);
+    Route::get('products/{product}/gallery', [ProductController::class, 'gallery'])->name('products.gallery');
+    Route::resource('product-galleries', ProductGalleryController::class)->except(['show', 'edit', 'update']);
 });
 
 require __DIR__ . '/auth.php';
