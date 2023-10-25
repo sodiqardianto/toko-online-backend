@@ -54,28 +54,6 @@
                                             </td>
                                         </tr>
                                     @endforelse
-
-                                    {{-- <tr>
-                                    <td>1</td>
-                                    <td>Nama</td>
-                                    <td>Tipe</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>
-                                        <a href="#" class="btn btn-info btn-sm">
-                                            <i class="fa fa-picture-o"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                        <form action="#" method="post" class="d-inline">
-                                            @method('delete')
-                                            <button class="btn btn-danger btn-sm">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr> --}}
                                 </tbody>
                             </table>
                         </div>
