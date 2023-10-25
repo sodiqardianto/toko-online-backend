@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CheckoutController;
+use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\TransactionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+    
 });
+
+Route::post('register', [AuthController::class, 'register']);
+
+Route::get('products', [ProductController::class, 'all']);
+Route::post('checkout', [CheckoutController::class, 'checkout']);
+Route::get('transactions/{id}', [TransactionController::class, 'getTransactions']);
