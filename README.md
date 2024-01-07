@@ -25,7 +25,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  composer install
 ```
 
 Create .env file, and change database name, and port
